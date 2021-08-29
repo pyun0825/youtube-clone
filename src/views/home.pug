@@ -1,12 +1,6 @@
 extends base.pug
 include mixins/video
 
-block navigation 
-    nav 
-        ul 
-            li 
-                a(href="/videos/upload") Upload Video
-
 block content 
     each potato in videos 
         +video(potato)
