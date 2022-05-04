@@ -47,6 +47,7 @@ export const postEdit = async (req, res) => {
   if (String(foundVideo.owner) !== String(_id)) {
     return res.status(403).redirect("/");
   }
+  req.flash("success", "Changes saved.");
   return res.redirect(`/videos/${id}`);
 };
 
@@ -90,6 +91,7 @@ export const deleteVideo = async (req, res) => {
     return res.render("404", { pageTitle: "Video Not Found" });
   }
   if (String(video.owner) !== String(_id)) {
+    req.flash("error", "Not authorized");
     return res.status(403).redirect("/");
   }
   await Video.findByIdAndDelete(id);
