@@ -101,7 +101,7 @@ const handleMouseLeave = () => {
 };
 
 const handleKeyDown = (event) => {
-  if (event.keyCode == 32) {
+  if (event.keyCode == 32 && document.activeElement.tagName != "TEXTAREA") {
     event.preventDefault();
     if (video.paused) {
       video.play();
