@@ -1,16 +1,18 @@
 # Youtube Clone
+Clone coding of Youtube.
 
-/ -> Home
-/join -> Join
-/login -> Login
-/search -> Search
+Deployed via Heroku, MongoDB Atlas and AWS S3
 
-/users/:id -> See User
-/users/logout -> Log Out
-/users/edit -> Edit MY Profile
-/users/remove -> Delete MY Profile
+## Coded using...
+### Frontend
+- Pug
+- Webpack
+### Backend
+- NodeJS(Express)
+- MongoDB(MongoDB Atlas)
+- Mongoose
+### DevOps
+- Heroku
+- AWS S3
 
-/videos/:id -> See Video
-/videos/:id/edit -> Edit Video
-/videos/:id/delete -> Delete Video
-/videos/upload -> Upload Video
+https://wetube-pyun.herokuapp.com/
